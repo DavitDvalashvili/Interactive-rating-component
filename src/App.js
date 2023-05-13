@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import Rate from './components/Rate.jsx';
+import Rate from "./components/Rate.jsx";
 import Result from "./components/Result.jsx";
 
 export default function App() {
@@ -9,7 +9,11 @@ export default function App() {
 
   return (
     <div className="App">
-      {submit ? <Result rate={rate}/> :  <Rate setSubmit={setSubmit} rate={rate}  setRate={setRate}/>}
+      {submit ? (
+        <Result rate={rate} />
+      ) : (
+        <Rate setSubmit={setSubmit} rate={rate} setRate={setRate} />
+      )}
     </div>
   );
 }
